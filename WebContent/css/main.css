@@ -1,0 +1,48 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.main{
+	margin:20px;
+	width:100%;
+}
+.title{
+	font-size:40px;
+	text-align:center;
+	line-height: 40px;
+	font-weitht:bold;
+}
+.supbar{
+	font-size:24px;
+}
+.supbar span{
+	font-weight:bold;
+	margin-right:40px;
+}
+.middle{
+	margin-top:20px;
+}
+.middle .left{
+	float:left;
+	font-size:30px;
+	width:10%;
+}
+.middle .left ul{
+	list-style: none;
+}
+.middle .right{
+	float:left;
+	border:solid 3px;
+	font-weight:bloder;
+	width:85%;
+	height:600px;
+	
+}
+.middle .right span{
+	display:block;
+	height:600px;
+	font-size:40px;
+	line-height:600px;
+	text-align:center;
+}

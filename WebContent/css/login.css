@@ -1,0 +1,29 @@
+@charset "UTF-8";
+*{
+	padding:0;
+	margin:0;
+}
+.login{
+	width:800px;
+	margin:10px auto;
+}
+
+.login caption{
+	font-size:40px;
+	font-weight:bolder;
+}
+
+.login table tr{
+	font-size:24px;
+	font-weight:lighter;
+}
+.login table tr [type='submit']{
+	font-size:18px;
+	padding:2px;
+	width:50px;
+}
+ table tr input{
+	width:260px;
+	height:30px;
+	font-size:24px;
+}

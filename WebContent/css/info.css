@@ -1,0 +1,50 @@
+@charset "utf-8";
+*{
+	padding:0;
+	margin:0;
+}
+
+.realEstate{
+	height:600px;
+	width:100%;
+}
+.realEstate .title{
+	font-size:40px;
+	/* 	border:solid green; */
+}
+.query{
+	font-size:24px;
+	/* border:solid red; */
+	height:50px;
+}
+.realEstate .form{
+	width:100%;
+	text-align:center;
+	/* border:solid; */
+}
+.query select{
+	font-size:18px;
+	height:24px;
+}
+.query input{
+	font-size:24px;
+}
+.realEstate table{
+	margin:auto;
+}
+table tr th{
+	font-size:30px;
+}
+table tr td{
+	font-size:24px;
+}
+
+.bottom{
+	width:500px;
+	text-align: center;
+	margin:0 auto;
+	font-size:24px;	
+}
+
+
+

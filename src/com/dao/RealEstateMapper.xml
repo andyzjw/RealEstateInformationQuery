@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace的名字需要跟接口的类名一致 -->
+<mapper namespace="com.dao.RealEstateMapper">
+	<resultMap type="RealEstate" id="realEstateMap">
+		<id property="id" column="id"/>
+		<result property="cardId" column="cardId"/>
+		<result property="projectName" column="projectName"/>
+		<result property="address" column="address"/>
+		<result property="houseType" column="houseType"/>
+		<result property="area" column="area"/>
+		<result property="buildTime" column="bulidTime"/>
+		<result property="name" column=" name"/>
+	</resultMap>
+	
+	<select id="queryAll" parameterType="map" resultMap="realEstateMap" >
+		SELECT  r.`id`,r.`cardId`, u.`name`,r.`projectName`, r.`address`,r.`houseType`,r.`area`,r.`bulidTime`
+		FROM  real_estate r
+		LEFT JOIN users u 
+		ON r.`cardId` = u.`cardId`
+		<where>
+			<if test="name != null">u.`name` like concat('%', #{name}, '%')</if>
+			<if test="cardId != null">r.`cardId` like concat('%', #{cardId}, '%')</if>
+		</where>
+		limit #{identifier},#{pageSize}
+	</select>
+	
+	<select id="queryCount" parameterType="map" resultType="int">
+		select count(1) 
+		from real_estate r
+		LEFT JOIN users u 
+		ON r.`cardId` = u.`cardId`
+		<where>
+			<if test="name != null">u.`name` like concat('%', #{name}, '%')</if>
+			<if test="cardId != null">r.`cardId` like concat('%', #{cardId}, '%')</if>
+		</where>
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
